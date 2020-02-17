@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationView" customModule="ChineseChess" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xep-My-WHU">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xep-My-WHU" secondAttribute="height" multiplier="1:1" id="ROW-zf-tG3"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="userClickedBackBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZJJ-QA-vya"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left: 01:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-06-kvx">
+                    <rect key="frame" x="128" y="11.5" width="119.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xep-My-WHU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9QN-l6-Ie6"/>
+                <constraint firstItem="PIO-06-kvx" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="HRT-ew-sGd"/>
+                <constraint firstItem="xep-My-WHU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Wvy-uB-SB3"/>
+                <constraint firstItem="PIO-06-kvx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eAC-kt-Wey"/>
+                <constraint firstItem="xep-My-WHU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="wdg-cA-CEM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="chessView" destination="PIO-06-kvx" id="TYF-m7-t8R"/>
+            </connections>
+            <point key="canvasLocation" x="-328.80000000000001" y="-139.43028485757122"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
