@@ -25,4 +25,8 @@ enum PieceStatus {
 
 class MyAppDelegate: NSObject {
 	static var brain = ChessCore()
+	
+	static var navigationView: NavigationView!
+	
+	static var playerInfoView: PlayerInfoView!
 }

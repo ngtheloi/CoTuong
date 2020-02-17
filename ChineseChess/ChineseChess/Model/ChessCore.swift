@@ -31,6 +31,7 @@ class ChessCore: NSObject {
 			
 			if self.checkMovementAvailability(piece.position) {
 				self.eatPiece(piece)
+				MyAppDelegate.playerInfoView.updatePlayerInfoViewState(currentPlayer)
 			}
 		} else {
 			if piece.owner == currentPlayer {

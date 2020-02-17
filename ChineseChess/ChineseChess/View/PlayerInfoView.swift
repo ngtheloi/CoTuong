@@ -34,46 +34,48 @@ class PlayerInfoView: UIView {
 		super.awakeFromNib()
 		player1InfoView.layer.borderWidth = 1
 		player2InfoView.layer.borderWidth = 1
-		self.updateInfo()
+		self.updatePlayerPausesLeft()
 	}
 	
-	func updateInfo() {
+	func updatePlayerPausesLeft() {
 		self.player1PausesLeftLbl.text = String(format: "Pauses left: %d", player1PausesLeft)
 		self.player2PausesLeftLbl.text = String(format: "Pauses left: %d", player2PausesLeft)
 	}
 	
-	func changePlayerInfoStateView(_ currentPlayer: Player) {
+	func updatePlayerInfoViewState(_ currentPlayer: Player) {
 		let activeColor = UIColor(red:0.30, green:0.85, blue:0.39, alpha:1.0)
-		let inActiveColor = UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)
-		if currentPlayer == .Red {
+		let inActiveColor = UIColor(red:0.45, green:0.45, blue:0.45, alpha:1.0)
+		
+		if currentPlayer == .Red {// Player 1 active, Player 2 inactive
 			player1InfoView.layer.borderColor = activeColor.cgColor
-//			player1NameLbl.textColor = activeColor
 			player1PausesLeftLbl.textColor = activeColor
 			player1PauseBtn.setTitleColor(activeColor, for: .normal)
 			player1PauseBtn.tintColor = activeColor
-			player1PauseBtn.isUserInteractionEnabled = true
 			
 			player2InfoView.layer.borderColor = inActiveColor.cgColor
-//			player2NameLbl.textColor = inActiveColor
 			player2PausesLeftLbl.textColor = inActiveColor
 			player2PauseBtn.setTitleColor(inActiveColor, for: .normal)
 			player2PauseBtn.tintColor = inActiveColor
-			player2PauseBtn.isUserInteractionEnabled = false
-		} else if currentPlayer == .Black {
+		} else if currentPlayer == .Black {// Player 1 inactive, Player 2 active
 			player1InfoView.layer.borderColor = inActiveColor.cgColor
-//			player1NameLbl.textColor = inActiveColor
 			player1PausesLeftLbl.textColor = inActiveColor
 			player1PauseBtn.setTitleColor(inActiveColor, for: .normal)
 			player1PauseBtn.tintColor = inActiveColor
-			player1PauseBtn.isUserInteractionEnabled = false
 			
 			player2InfoView.layer.borderColor = activeColor.cgColor
-//			player2NameLbl.textColor = activeColor
 			player2PausesLeftLbl.textColor = activeColor
 			player2PauseBtn.setTitleColor(activeColor, for: .normal)
 			player2PauseBtn.tintColor = activeColor
-			player2PauseBtn.isUserInteractionEnabled = true
 		}
+		self.updatePauseButtonState(currentPlayer)
+	}
+	
+	func updatePauseButtonState(_ currentPlayer: Player) {
+		let player1Check = currentPlayer == .Red && player1PausesLeft > 0
+		player1PauseBtn.isUserInteractionEnabled = player1Check
+		
+		let player2Check = currentPlayer == .Black && player2PausesLeft > 0
+		player2PauseBtn.isUserInteractionEnabled = player2Check
 	}
 	
 	// MARK: - Action
@@ -91,6 +93,6 @@ class PlayerInfoView: UIView {
 				player2PauseBtn.isUserInteractionEnabled = false
 			}
 		}
-		self.updateInfo()
+		self.updatePlayerPausesLeft()
 	}
 }

@@ -21,10 +21,6 @@ class BoardView: UIView {
 		}
 	}
 	
-	var navigationView: NavigationView!
-	
-	var playerInfoView: PlayerInfoView!
-	
 	// Chess board has 9 rows grid and 8 columns grid
 	let boardRowsNumber: CGFloat = 9
 	
@@ -96,14 +92,14 @@ class BoardView: UIView {
 	}
 	
 	func initSubView() {
-		self.navigationView = Bundle.main.loadNibNamed(NavigationView.identifier, owner: self, options: nil)?.first as? NavigationView
-		self.navigationView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: 44)
-		self.addSubview(self.navigationView)
+		MyAppDelegate.navigationView = Bundle.main.loadNibNamed(NavigationView.identifier, owner: self, options: nil)?.first as? NavigationView
+		MyAppDelegate.navigationView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: 44)
+		self.addSubview(MyAppDelegate.navigationView)
 		
-		self.playerInfoView = Bundle.main.loadNibNamed(PlayerInfoView.identifier, owner: self, options: nil)?.first as? PlayerInfoView
-		let y = bounds.size.height - playerInfoView.bounds.size.height
-		self.playerInfoView.frame = CGRect(x: 0, y: y, width: bounds.size.width, height: playerInfoView.bounds.size.height)
-		self.playerInfoView.changePlayerInfoStateView(MyAppDelegate.brain.currentPlayer)
-		self.addSubview(self.playerInfoView)
+		MyAppDelegate.playerInfoView = Bundle.main.loadNibNamed(PlayerInfoView.identifier, owner: self, options: nil)?.first as? PlayerInfoView
+		let y = bounds.size.height - MyAppDelegate.playerInfoView.bounds.size.height
+		MyAppDelegate.playerInfoView.frame = CGRect(x: 0, y: y, width: bounds.size.width, height: MyAppDelegate.playerInfoView.bounds.size.height)
+		MyAppDelegate.playerInfoView.updatePlayerInfoViewState(MyAppDelegate.brain.currentPlayer)
+		self.addSubview(MyAppDelegate.playerInfoView)
 	}
 }

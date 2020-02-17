@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		boardView.navigationView.delegate = self
+		MyAppDelegate.navigationView.delegate = self
 	}
 	
 	@objc func performOperation(_ sender: PieceView!) {
@@ -102,7 +102,7 @@ class GameViewController: UIViewController {
 		if MyAppDelegate.brain.checkMovementAvailability(Vector(x: row, y: col)) {
 			pendingView?.center = boardCoordinates[row][col]
 			self.clearPendingPieceView()
-			boardView.playerInfoView.changePlayerInfoStateView(MyAppDelegate.brain.currentPlayer)
+			MyAppDelegate.playerInfoView.updatePlayerInfoViewState(MyAppDelegate.brain.currentPlayer)
 		}
 	}
 	
