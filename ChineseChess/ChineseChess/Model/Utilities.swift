@@ -23,17 +23,6 @@ enum PieceStatus {
     case Dead
 }
 
-struct GameSetting {
-	var timeLeft: Int // second
-	var pausesLeft: Int
-	var pauseTimeLeft: Int // second
-}
-
-struct PlayerInfo {
-	var player: Player
-	var setting: GameSetting
-}
-
 class MyAppDelegate: NSObject {
 	static var brain = ChessCore()
 }
