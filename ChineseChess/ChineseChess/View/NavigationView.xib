@@ -43,7 +43,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="chessView" destination="PIO-06-kvx" id="TYF-m7-t8R"/>
+                <outlet property="timeLeftLbl" destination="PIO-06-kvx" id="pMY-sE-Tpo"/>
             </connections>
             <point key="canvasLocation" x="-328.80000000000001" y="-139.43028485757122"/>
         </view>
