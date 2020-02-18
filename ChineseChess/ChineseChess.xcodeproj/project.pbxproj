@@ -26,6 +26,8 @@
 		0F52213F23F84F7E00AC559E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F52213E23F84F7E00AC559E /* NavigationView.xib */; };
 		0F52214123F8525500AC559E /* PlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52214023F8525500AC559E /* PlayerInfoView.swift */; };
 		0F52214323F8526600AC559E /* PlayerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F52214223F8526600AC559E /* PlayerInfoView.xib */; };
+		0FAE557D23FC24FE000B7EF3 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE557B23FC24FE000B7EF3 /* AlertView.xib */; };
+		0FAE557E23FC24FE000B7EF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE557C23FC24FE000B7EF3 /* AlertView.swift */; };
 		0FD1B72823F7A1B00026AD63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1B72723F7A1B00026AD63 /* AppDelegate.swift */; };
 		0FD1B72A23F7A1B00026AD63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1B72923F7A1B00026AD63 /* SceneDelegate.swift */; };
 		0FD1B72C23F7A1B00026AD63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1B72B23F7A1B00026AD63 /* MainViewController.swift */; };
@@ -54,6 +56,8 @@
 		0F52213E23F84F7E00AC559E /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		0F52214023F8525500AC559E /* PlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoView.swift; sourceTree = "<group>"; };
 		0F52214223F8526600AC559E /* PlayerInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerInfoView.xib; sourceTree = "<group>"; };
+		0FAE557B23FC24FE000B7EF3 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		0FAE557C23FC24FE000B7EF3 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		0FD1B72423F7A1B00026AD63 /* ChineseChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD1B72723F7A1B00026AD63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD1B72923F7A1B00026AD63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				0F52213E23F84F7E00AC559E /* NavigationView.xib */,
 				0F52214023F8525500AC559E /* PlayerInfoView.swift */,
 				0F52214223F8526600AC559E /* PlayerInfoView.xib */,
+				0FAE557C23FC24FE000B7EF3 /* AlertView.swift */,
+				0FAE557B23FC24FE000B7EF3 /* AlertView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 				0F52214323F8526600AC559E /* PlayerInfoView.xib in Resources */,
 				0FD1B73423F7A1B10026AD63 /* LaunchScreen.storyboard in Resources */,
 				0FD1B73123F7A1B10026AD63 /* Assets.xcassets in Resources */,
+				0FAE557D23FC24FE000B7EF3 /* AlertView.xib in Resources */,
 				0F52213F23F84F7E00AC559E /* NavigationView.xib in Resources */,
 				0FD1B72F23F7A1B00026AD63 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +230,7 @@
 			files = (
 				0F4C47EE23F7F9D100CB53D9 /* GameViewController.swift in Sources */,
 				0F4C47F323F7FC8900CB53D9 /* ContentView.swift in Sources */,
+				0FAE557E23FC24FE000B7EF3 /* AlertView.swift in Sources */,
 				0F4C47F723F7FDA100CB53D9 /* PieceView.swift in Sources */,
 				0FD1B72C23F7A1B00026AD63 /* MainViewController.swift in Sources */,
 				0F4C47F523F7FD2800CB53D9 /* BoardView.swift in Sources */,
