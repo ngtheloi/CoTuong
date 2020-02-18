@@ -27,6 +27,7 @@ enum AlertStyle {
 	case Winner
 	case ExitGame
 	case PauseGame
+	case Paused
 }
 
 class MyAppDelegate: NSObject {
