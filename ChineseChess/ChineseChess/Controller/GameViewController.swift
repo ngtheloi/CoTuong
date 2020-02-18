@@ -60,6 +60,17 @@ class GameViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		MyAppDelegate.navigationView.delegate = self
+		MyAppDelegate.playerInfoView.delegate = self
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		MyAppDelegate.navigationView.stopTimers()
+		
+		MyAppDelegate.navigationView = nil
+		MyAppDelegate.playerInfoView = nil
+		MyAppDelegate.alertView = nil
 	}
 	
 	@objc func performOperation(_ sender: PieceView!) {
@@ -131,17 +142,20 @@ class GameViewController: UIViewController {
 	
 	private func checkWinner() {
 		if MyAppDelegate.brain.winner != nil {
-			MyAppDelegate.alertView = Bundle.main.loadNibNamed(AlertView.identifier, owner: self, options: nil)?.first as? AlertView
-			MyAppDelegate.alertView.delegate = self
-			MyAppDelegate.alertView.loadText(.Winner)
-			self.view.addSubview(MyAppDelegate.alertView)
+			self.showAlertView(.Winner)
 		}
+	}
+	
+	func showAlertView(_ style: AlertStyle) {
+		MyAppDelegate.alertView = Bundle.main.loadNibNamed(AlertView.identifier, owner: self, options: nil)?.first as? AlertView
+		MyAppDelegate.alertView.delegate = self
+		MyAppDelegate.alertView.loadText(style)
+		self.view.addSubview(MyAppDelegate.alertView)
 	}
 }
 
 extension GameViewController: NavigationViewDelegate {
 	func dismissViewController() {
-		MyAppDelegate.navigationView.stopTimers()
 		self.dismiss(animated: true, completion: nil)
 	}
 	
@@ -161,5 +175,11 @@ extension GameViewController: AlertViewDelegate {
         }
 		MyAppDelegate.navigationView.stopTimers()
 		MyAppDelegate.navigationView.startTimers()
+	}
+}
+
+extension GameViewController: PlayerInfoViewDelegate {
+	func pauseGame() {
+		self.showAlertView(.PauseGame)
 	}
 }

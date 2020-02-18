@@ -27,6 +27,7 @@ class PlayerInfoView: UIView {
 	@IBOutlet weak var player2PauseBtn: UIButton!
 	
 	static let identifier = "PlayerInfoView"
+	var delegate: PlayerInfoViewDelegate!
 	var player1PausesLeft: Int = 2
 	var player2PausesLeft: Int = 2
 	
@@ -80,19 +81,6 @@ class PlayerInfoView: UIView {
 	
 	// MARK: - Action
 	@IBAction func userClickedPauseBtn(_ sender: UIButton) {
-		if sender == player1PauseBtn {
-			if player1PausesLeft > 0 {
-				player1PausesLeft -= 1
-			} else {
-				player1PauseBtn.isUserInteractionEnabled = false
-			}
-		} else {
-			if player2PausesLeft > 0 {
-				player2PausesLeft -= 1
-			} else {
-				player2PauseBtn.isUserInteractionEnabled = false
-			}
-		}
-		self.updatePlayerPausesLeft()
+		self.delegate.pauseGame()
 	}
 }
