@@ -10,6 +10,7 @@ import UIKit
 
 protocol NavigationViewDelegate {
 	func dismissViewController()
+	func timeOut()
 }
 
 class NavigationView: UIView {
@@ -30,6 +31,7 @@ class NavigationView: UIView {
 			timeLeft -= 1
 			if timeLeft == 0 {
 				MyAppDelegate.brain.winner = (MyAppDelegate.brain.currentPlayer == .Red) ? .Black : .Red
+				self.delegate.timeOut()
 			}
 		}
 	}

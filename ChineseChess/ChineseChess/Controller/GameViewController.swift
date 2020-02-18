@@ -143,6 +143,10 @@ extension GameViewController: NavigationViewDelegate {
 	func dismissViewController() {
 		self.dismiss(animated: true, completion: nil)
 	}
+	
+	func timeOut() {
+		self.checkWinner()
+	}
 }
 
 extension GameViewController: AlertViewDelegate {

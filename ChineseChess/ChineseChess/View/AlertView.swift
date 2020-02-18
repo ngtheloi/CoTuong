@@ -37,7 +37,7 @@ class AlertView: UIView {
 		alertStyle = style
 		if alertStyle == .Winner {
 			title = "Congratulation!"
-			message = String(format: "%@ is winner", (MyAppDelegate.brain.winner == .Red) ? "Player 1 is winner" : "Player 2 is winner")
+			message = (MyAppDelegate.brain.winner == .Red) ? "Player 1 is winner" : "Player 2 is winner"
 			btn1 = "Exit game"
 			btn2 = "Replay"
 		} else if alertStyle == .ExitGame {
