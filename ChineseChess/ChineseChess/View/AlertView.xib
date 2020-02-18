@@ -38,6 +38,9 @@
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="userClickedBtn1:" destination="sKA-z4-y6L" eventType="touchUpInside" id="WFK-se-21W"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-zO-ij8">
                                     <rect key="frame" x="107" y="0.0" width="83" height="30"/>
@@ -45,6 +48,9 @@
                                     <state key="normal" title="OK">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="userClickedBtn2:" destination="sKA-z4-y6L" eventType="touchUpInside" id="FZI-X0-1j9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

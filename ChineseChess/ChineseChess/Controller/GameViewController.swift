@@ -130,22 +130,11 @@ class GameViewController: UIViewController {
 	}
 	
 	private func checkWinner() {
-		if let result = MyAppDelegate.brain.winner {
-			let message = (result == .Red) ? "Player 1 is winner" : "Player 2 is winner"
-			let alertController = UIAlertController(title: "RESULT", message: message, preferredStyle: .alert)
-			
-			let OK = UIAlertAction(title: "OK", style: .default) { (action) in
-				
-			}
-			
-			let replay = UIAlertAction(title: "Replay", style: .default) { (action) in
-				
-			}
-			
-			alertController.addAction(OK)
-			alertController.addAction(replay)
-			
-			self.present(alertController, animated: true, completion: nil)
+		if MyAppDelegate.brain.winner != nil {
+			MyAppDelegate.alertView = Bundle.main.loadNibNamed(AlertView.identifier, owner: self, options: nil)?.first as? AlertView
+			MyAppDelegate.alertView.delegate = self
+			MyAppDelegate.alertView.loadText(.Winner)
+			self.view.addSubview(MyAppDelegate.alertView)
 		}
 	}
 }
@@ -153,5 +142,17 @@ class GameViewController: UIViewController {
 extension GameViewController: NavigationViewDelegate {
 	func dismissViewController() {
 		self.dismiss(animated: true, completion: nil)
+	}
+}
+
+extension GameViewController: AlertViewDelegate {
+	func replayGame() {
+		MyAppDelegate.brain.replay()
+		self.clearPendingPieceView()
+        
+		for (_, pv) in self.pieceModelViewReference {
+			pv.center = self.boardCoordinates[pv.piece.position.x][pv.piece.position.y]
+            pv.isHidden = false
+        }
 	}
 }

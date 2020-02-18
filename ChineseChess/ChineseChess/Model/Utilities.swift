@@ -23,10 +23,18 @@ enum PieceStatus {
     case Dead
 }
 
+enum AlertStyle {
+	case Winner
+	case ExitGame
+	case PauseGame
+}
+
 class MyAppDelegate: NSObject {
 	static var brain = ChessCore()
 	
 	static var navigationView: NavigationView!
 	
 	static var playerInfoView: PlayerInfoView!
+	
+	static var alertView: AlertView!
 }
