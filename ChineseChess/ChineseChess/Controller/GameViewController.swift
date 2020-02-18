@@ -67,6 +67,7 @@ class GameViewController: UIViewController {
 		super.viewWillDisappear(animated)
 		
 		MyAppDelegate.navigationView.stopTimers()
+		MyAppDelegate.alertView.stopTimers()
 		
 		MyAppDelegate.navigationView = nil
 		MyAppDelegate.playerInfoView = nil

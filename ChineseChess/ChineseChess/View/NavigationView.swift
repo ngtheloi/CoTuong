@@ -50,6 +50,16 @@ class NavigationView: UIView {
 		return String(format: "Time left: %02d:%02d", timeLeft / 60, timeLeft - (timeLeft / 60 * 60))
 	}
 	
+	func configTimerState(_ pause: Bool) {
+		if self.timer != nil {
+			if pause {
+				self.timer.invalidate()
+			} else {
+				self.startTimers()
+			}
+		}
+	}
+	
 	@IBAction func userClickedBackBtn(_ sender: Any) {
 		self.delegate.dismissViewController()
 	}

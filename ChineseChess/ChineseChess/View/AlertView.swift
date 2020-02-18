@@ -30,6 +30,7 @@ class AlertView: UIView {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
+		MyAppDelegate.navigationView.configTimerState(true)
 	}
 	
 	func loadText(_ style: AlertStyle) {
@@ -133,6 +134,7 @@ class AlertView: UIView {
 		MyAppDelegate.playerInfoView.updatePlayerPausesLeft()
 		self.stopTimers()
 		self.removeFromSuperview()
+		MyAppDelegate.navigationView.configTimerState(false)
 	}
 	
 	@IBAction func userClickedBtn1(_ sender: Any) {
@@ -140,6 +142,7 @@ class AlertView: UIView {
 		if alertStyle == .Winner {
 			self.delegate.dismissViewController()
 		}
+		MyAppDelegate.navigationView.configTimerState(false)
 	}
 	
 	@IBAction func userClickedBtn2(_ sender: Any) {
@@ -148,6 +151,7 @@ class AlertView: UIView {
 			self.startTimers()
 		} else {
 			self.removeFromSuperview()
+			MyAppDelegate.navigationView.configTimerState(false)
 			if alertStyle == .Winner {
 				self.delegate.replayGame()
 			} else if alertStyle == .ExitGame {
