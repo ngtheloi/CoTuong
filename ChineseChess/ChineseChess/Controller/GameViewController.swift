@@ -141,6 +141,7 @@ class GameViewController: UIViewController {
 
 extension GameViewController: NavigationViewDelegate {
 	func dismissViewController() {
+		MyAppDelegate.navigationView.stopTimers()
 		self.dismiss(animated: true, completion: nil)
 	}
 	
@@ -158,5 +159,7 @@ extension GameViewController: AlertViewDelegate {
 			pv.center = self.boardCoordinates[pv.piece.position.x][pv.piece.position.y]
             pv.isHidden = false
         }
+		MyAppDelegate.navigationView.stopTimers()
+		MyAppDelegate.navigationView.startTimers()
 	}
 }
