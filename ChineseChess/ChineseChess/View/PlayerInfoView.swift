@@ -28,8 +28,8 @@ class PlayerInfoView: UIView {
 	
 	static let identifier = "PlayerInfoView"
 	var delegate: PlayerInfoViewDelegate!
-	var player1PausesLeft: Int = 2
-	var player2PausesLeft: Int = 2
+	var player1PausesLeft: Int = MyAppDelegate.setting.pausesLeft
+	var player2PausesLeft: Int = MyAppDelegate.setting.pausesLeft
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()

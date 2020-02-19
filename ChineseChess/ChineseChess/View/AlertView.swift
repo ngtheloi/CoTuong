@@ -26,7 +26,7 @@ class AlertView: UIView {
 	var alertStyle: AlertStyle!
 	var delegate: AlertViewDelegate!
 	var timer: Timer!
-	var pauseTimeLeft = 120
+	var pauseTimeLeft = MyAppDelegate.setting.pauseTimeLeft
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()

@@ -17,7 +17,7 @@ class NavigationView: UIView {
 	static let identifier = "NavigationView"
 	var delegate: NavigationViewDelegate!
 	var timer: Timer!
-	var timeLeft = 120
+	var timeLeft = MyAppDelegate.setting.timeLeft
 	
 	@IBOutlet weak var timeLeftLbl: UILabel!
 	
