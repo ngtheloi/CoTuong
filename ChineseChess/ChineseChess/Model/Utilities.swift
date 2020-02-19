@@ -30,6 +30,11 @@ enum AlertStyle {
 	case Paused
 }
 
+enum AssistantStyle {
+	case Setting
+	case History
+}
+
 class MyAppDelegate: NSObject {
 	static var brain = ChessCore()
 	
@@ -40,9 +45,9 @@ class MyAppDelegate: NSObject {
 	static var alertView: AlertView!
 	
 	static var setting: GameSetting = {
-		let timeLeft: Int = UserDefaults.standard.object(forKey: "timeLeft") as? Int ?? 60
-		let pausesLeft: Int = UserDefaults.standard.object(forKey: "pausesLeft") as? Int ?? 2
-		let pauseTimeLeft: Int = UserDefaults.standard.object(forKey: "pauseTimeLeft") as? Int ?? 60
+		let timeLeft: Int = UserDefaults.standard.integer(forKey: "timeLeft")
+		let pausesLeft: Int = UserDefaults.standard.integer(forKey: "pausesLeft")
+		let pauseTimeLeft: Int = UserDefaults.standard.integer(forKey: "pauseTimeLeft")
 		return GameSetting(timeLeft, pausesLeft, pauseTimeLeft)
 	}()
 }

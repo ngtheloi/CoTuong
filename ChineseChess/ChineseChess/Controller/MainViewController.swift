@@ -41,6 +41,9 @@ class MainViewController: UIViewController {
 	}
 	
 	@IBAction func userClickedSettingView(_ sender: Any) {
+		let settingView = Bundle.main.loadNibNamed("AssistantView", owner: self, options: nil)?.first as! AssistantView
+		settingView.loadText(.Setting)
+		self.view.addSubview(settingView)
 	}
 	
 	@IBAction func userClickedHistoryBtn(_ sender: Any) {
