@@ -107,11 +107,10 @@ class AlertView: UIView {
 	@objc func updateCounter() {
 		//example functionality
 		if pauseTimeLeft > 0 {
-			messageLbl.text = self.getCountDownTime()
 			pauseTimeLeft -= 1
-			if pauseTimeLeft == 0 {
-				self.resumeGame()
-			}
+			messageLbl.text = self.getCountDownTime()
+		} else if pauseTimeLeft == 0 {
+			self.resumeGame()
 		}
 	}
 	

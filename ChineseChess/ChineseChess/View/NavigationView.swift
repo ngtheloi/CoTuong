@@ -36,13 +36,12 @@ class NavigationView: UIView {
 	@objc func updateCounter() {
 		//example functionality
 		if timeLeft > 0 {
-			timeLeftLbl.text = self.getCountDownTime()
 			timeLeft -= 1
-			if timeLeft == 0 {
-				MyAppDelegate.brain.winner = (MyAppDelegate.brain.currentPlayer == .Red) ? .Black : .Red
-				self.stopTimers()
-				self.delegate.timeOut()
-			}
+			timeLeftLbl.text = self.getCountDownTime()
+		} else if timeLeft == 0 {
+			MyAppDelegate.brain.winner = (MyAppDelegate.brain.currentPlayer == .Red) ? .Black : .Red
+			self.stopTimers()
+			self.delegate.timeOut()
 		}
 	}
 	
