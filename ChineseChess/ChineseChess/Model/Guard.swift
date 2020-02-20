@@ -29,7 +29,7 @@ class Guard: Piece {
     
     override func isValidMove(_ move: Vector, _ boardStates: [[Piece?]]) -> Bool {
         // Guard can only move inside forbidden area
-        if !Board.isForbidden(move) {
+        if !move.isForbidden() {
             return false
         }
         

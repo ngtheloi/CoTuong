@@ -16,35 +16,6 @@ class Board: NSObject {
     
     public static var initialBoardStates: [[Piece?]] = Board.initPiecesStates()
     
-    public static func isForbidden(_ position: Vector) -> Bool {
-        if position.y >= 3 && position.y <= 5 {
-            if (position.x >= 0 && position.x <= 2) || (position.x >= 7 && position.x <= 9) {
-                return true
-            }
-        }
-        return false
-    }
-    
-    public static func isOutOfBoard(_ position: Vector) -> Bool {
-        if position.x < 0 {
-            return true
-        }
-        
-        if position.x >= Board.rows {
-            return true
-        }
-        
-        if position.y < 0 {
-            return true
-        }
-        
-        if position.y >= Board.columns {
-            return true
-        }
-        
-        return false
-    }
-    
     public static func getTerritoryOwner(_ x: Int) -> Player {
 		return (x < riverRow) ? .Black : .Red
     }

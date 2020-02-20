@@ -63,3 +63,26 @@ struct GameSetting {
 		self.pauseTimeLeft = pauseTimeLeft
 	}
 }
+
+extension Vector {
+	func isForbidden() -> Bool {
+        if self.y >= 3 && self.y <= 5 {
+            if (self.x >= 0 && self.x <= 2) || (self.x >= 7 && self.x <= 9) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func isOutOfBoard() -> Bool {
+        if self.x < 0 || self.x >= 10/*Board.rows*/ {
+			return true
+		}
+        
+        if self.y < 0 || self.y >= 9/*Board.columns*/ {
+            return true
+        }
+        
+        return false
+    }
+}

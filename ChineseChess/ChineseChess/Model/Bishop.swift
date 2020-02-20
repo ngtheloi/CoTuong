@@ -27,7 +27,7 @@ class Bishop: Piece {
     }
     
     override func isValidMove(_ move: Vector, _ boardStates: [[Piece?]]) -> Bool {
-        if Board.isOutOfBoard(move) {
+		if move.isOutOfBoard() {
             return false
         }
         
