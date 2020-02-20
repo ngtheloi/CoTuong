@@ -15,10 +15,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwJ-Y3-lZp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbV-Jp-LMY">
-                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="101"/>
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="98"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-JQ-0yk">
                                     <rect key="frame" x="8" y="8" width="171.5" height="24"/>
@@ -27,14 +27,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-x3-2kZ">
-                                    <rect key="frame" x="8" y="40" width="171.5" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="8" y="40" width="171.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xux-n9-FKr">
-                                    <rect key="frame" x="8" y="69" width="171.5" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="8" y="66" width="171.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title=" PAUSE" image="pause.circle.fill" catalog="system"/>
                                     <connections>
                                         <action selector="userClickedPauseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Te6-fE-Dzk"/>
@@ -56,7 +56,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPB-rz-VYg">
-                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="101"/>
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="98"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-vN-wBZ">
                                     <rect key="frame" x="8" y="8" width="171.5" height="24"/>
@@ -65,14 +65,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bT-uz-eCL">
-                                    <rect key="frame" x="8" y="40" width="171.5" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="8" y="40" width="171.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-24-KQC">
-                                    <rect key="frame" x="8" y="69" width="171.5" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <rect key="frame" x="8" y="66" width="171.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title=" PAUSE" image="pause.circle.fill" catalog="system"/>
                                     <connections>
                                         <action selector="userClickedPauseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Aye-YV-yxd"/>

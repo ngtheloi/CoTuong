@@ -40,22 +40,22 @@ class AlertView: UIView {
 		var btn2 = "YES"
 		alertStyle = style
 		if alertStyle == .Winner {
-			title = "Congratulation!"
+			title = "CONGRATULATION!"
 			message = (MyAppDelegate.brain.winner == .Red) ? "Player 1 is winner" : "Player 2 is winner"
 			btn1 = "Exit game"
 			btn2 = "Replay"
 		} else if alertStyle == .ExitGame {
-			title = "Exit to Main Menu!"
+			title = "EXIT TO MAIN MENU!"
 			message = "Are you sure you want to return the main menu?"
 			btn1 = "NO"
 			btn2 = "YES"
 		} else if alertStyle == .PauseGame {
-			title = "Pause game!"
+			title = "PAUSE GAME!"
 			message = "Are you sure you want to pause your turn?"
 			btn1 = "NO"
 			btn2 = "YES"
 		} else if alertStyle == .Paused {
-			title = "Paused"
+			title = "PAUSED"
 			message = self.getCountDownTime()
 		}
 		titleLbl.text = title
