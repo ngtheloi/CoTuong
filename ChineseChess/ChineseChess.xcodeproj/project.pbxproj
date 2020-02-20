@@ -26,6 +26,8 @@
 		0F52213F23F84F7E00AC559E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F52213E23F84F7E00AC559E /* NavigationView.xib */; };
 		0F52214123F8525500AC559E /* PlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52214023F8525500AC559E /* PlayerInfoView.swift */; };
 		0F52214323F8526600AC559E /* PlayerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F52214223F8526600AC559E /* PlayerInfoView.xib */; };
+		0F84146923FE591500EFD274 /* AssistantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F84146723FE591500EFD274 /* AssistantView.xib */; };
+		0F84146A23FE591500EFD274 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84146823FE591500EFD274 /* AssistantView.swift */; };
 		0FAE557D23FC24FE000B7EF3 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAE557B23FC24FE000B7EF3 /* AlertView.xib */; };
 		0FAE557E23FC24FE000B7EF3 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE557C23FC24FE000B7EF3 /* AlertView.swift */; };
 		0FD1B72823F7A1B00026AD63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1B72723F7A1B00026AD63 /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		0F52213E23F84F7E00AC559E /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		0F52214023F8525500AC559E /* PlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoView.swift; sourceTree = "<group>"; };
 		0F52214223F8526600AC559E /* PlayerInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerInfoView.xib; sourceTree = "<group>"; };
+		0F84146723FE591500EFD274 /* AssistantView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssistantView.xib; sourceTree = "<group>"; };
+		0F84146823FE591500EFD274 /* AssistantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		0FAE557B23FC24FE000B7EF3 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		0FAE557C23FC24FE000B7EF3 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		0FD1B72423F7A1B00026AD63 /* ChineseChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChineseChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,8 @@
 				0F52214223F8526600AC559E /* PlayerInfoView.xib */,
 				0FAE557C23FC24FE000B7EF3 /* AlertView.swift */,
 				0FAE557B23FC24FE000B7EF3 /* AlertView.xib */,
+				0F84146823FE591500EFD274 /* AssistantView.swift */,
+				0F84146723FE591500EFD274 /* AssistantView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F52214323F8526600AC559E /* PlayerInfoView.xib in Resources */,
+				0F84146923FE591500EFD274 /* AssistantView.xib in Resources */,
 				0FD1B73423F7A1B10026AD63 /* LaunchScreen.storyboard in Resources */,
 				0FD1B73123F7A1B10026AD63 /* Assets.xcassets in Resources */,
 				0FAE557D23FC24FE000B7EF3 /* AlertView.xib in Resources */,
@@ -239,6 +246,7 @@
 				0F52214123F8525500AC559E /* PlayerInfoView.swift in Sources */,
 				0F4C47FB23F7FE8B00CB53D9 /* Piece.swift in Sources */,
 				0F4C480323F801BA00CB53D9 /* Bishop.swift in Sources */,
+				0F84146A23FE591500EFD274 /* AssistantView.swift in Sources */,
 				0F4C47FF23F8000000CB53D9 /* King.swift in Sources */,
 				0FD1B72823F7A1B00026AD63 /* AppDelegate.swift in Sources */,
 				0F52213D23F84F6E00AC559E /* NavigationView.swift in Sources */,
