@@ -11,7 +11,7 @@ import Foundation
 class ChessCore: NSObject {
 	public var pending: Piece?
 	public var currentPlayer: Player = .Red // Red player is the first one to play
-	public var gameStates = Board.initialBoardStates
+	public var gameStates = Board.initPiecesStates()
 	public var winner: Player?
 	
 	public func setPiece(_ piece: Piece) {
@@ -77,7 +77,7 @@ class ChessCore: NSObject {
 	func replay() {
 		pending = nil
 		currentPlayer = .Red
-		gameStates = Board.initialBoardStates
+		gameStates = Board.initPiecesStates()
 		winner = nil
 		
 		for i in 0 ..< Board.rows {

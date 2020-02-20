@@ -14,9 +14,7 @@ class Board: NSObject {
     public static let columns: Int = 9
     public static let riverRow: Int = 5
     
-    public static var initialBoardStates: [[Piece?]] = Board.initPiecesStates()
-    
-    private static func initPiecesStates() -> [[Piece?]] {
+    public static func initPiecesStates() -> [[Piece?]] {
         // Initialize a board and populate with nil
         
         var board = [[Piece?]](repeating: [Piece?] (repeating: nil, count: Board.columns), count: Board.rows)
