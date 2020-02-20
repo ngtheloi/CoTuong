@@ -16,10 +16,6 @@ class Board: NSObject {
     
     public static var initialBoardStates: [[Piece?]] = Board.initPiecesStates()
     
-    public static func getTerritoryOwner(_ x: Int) -> Player {
-		return (x < riverRow) ? .Black : .Red
-    }
-    
     private static func initPiecesStates() -> [[Piece?]] {
         // Initialize a board and populate with nil
         

@@ -32,7 +32,7 @@ class Bishop: Piece {
         }
         
         // Bishop can not accross the river on the board
-        if Board.getTerritoryOwner(move.x) != self.owner {
+        if MyAppDelegate.getTerritoryOwner(move.x) != self.owner {
             return false
         }
         

@@ -50,6 +50,10 @@ class MyAppDelegate: NSObject {
 		let pauseTimeLeft: Int = UserDefaults.standard.integer(forKey: "pauseTimeLeft")
 		return GameSetting(timeLeft, pausesLeft, pauseTimeLeft)
 	}()
+	
+	static func getTerritoryOwner(_ x: Int) -> Player {
+		return (x < Board.riverRow) ? .Black : .Red
+    }
 }
 
 struct GameSetting {

@@ -38,7 +38,7 @@ class Pawn: Piece {
 			}
 		}
 		
-		if Board.getTerritoryOwner(move.x) == self.owner {
+		if MyAppDelegate.getTerritoryOwner(move.x) == self.owner {
 			if (self.owner == .Red && position.x - 1 == move.x) {
 				return true
 			}
