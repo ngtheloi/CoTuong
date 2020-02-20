@@ -21,7 +21,11 @@ class NavigationView: UIView {
 	
 	@IBOutlet weak var timeLeftLbl: UILabel!
 	
-	func startTimers() {
+	func startTimers(_ restart: Bool) {
+		if restart {
+			self.stopTimers()
+			timeLeft = MyAppDelegate.setting.timeLeft
+		}
 		timeLeftLbl.text = self.getCountDownTime()
 		self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
 	}
@@ -54,7 +58,7 @@ class NavigationView: UIView {
 			if pause {
 				self.timer.invalidate()
 			} else {
-				self.startTimers()
+				self.startTimers(false)
 			}
 		}
 	}

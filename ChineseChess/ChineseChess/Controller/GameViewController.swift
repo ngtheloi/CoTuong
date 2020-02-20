@@ -177,7 +177,7 @@ extension GameViewController: AlertViewDelegate {
             pv.isHidden = false
         }
 		MyAppDelegate.navigationView.stopTimers()
-		MyAppDelegate.navigationView.startTimers()
+		MyAppDelegate.navigationView.startTimers(true)
 	}
 }
 

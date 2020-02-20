@@ -94,7 +94,7 @@ class BoardView: UIView {
 	func initSubView() {
 		MyAppDelegate.navigationView = Bundle.main.loadNibNamed(NavigationView.identifier, owner: self, options: nil)?.first as? NavigationView
 		MyAppDelegate.navigationView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: 44)
-		MyAppDelegate.navigationView.startTimers()
+		MyAppDelegate.navigationView.startTimers(false)
 		self.addSubview(MyAppDelegate.navigationView)
 		
 		MyAppDelegate.playerInfoView = Bundle.main.loadNibNamed(PlayerInfoView.identifier, owner: self, options: nil)?.first as? PlayerInfoView

@@ -52,7 +52,7 @@ class ChessCore: NSObject {
 				
 				// Next player's turn
 				currentPlayer = turnPlayer(currentPlayer)
-				
+				MyAppDelegate.navigationView.startTimers(true)
 				pending = nil
 				return true
 			}
