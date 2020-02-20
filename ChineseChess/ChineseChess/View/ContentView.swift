@@ -28,7 +28,7 @@ class ContentView: UIView {
     
     private func createPieces() -> [PieceView] {
         var ret: [PieceView] = []
-        let initialGameStates = Board.initPiecesStates()
+        let initialGameStates = Board.initialBoardStates
         
         for i in 0 ..< Board.rows {
             for j in 0 ..< Board.columns {

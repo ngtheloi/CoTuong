@@ -79,11 +79,11 @@ extension Vector {
     }
     
     func isOutOfBoard() -> Bool {
-        if self.x < 0 || self.x >= Board.rows {
+        if self.x < 0 || self.x >= 10/*Board.rows*/ {
 			return true
 		}
         
-        if self.y < 0 || self.y >= Board.columns {
+        if self.y < 0 || self.y >= 9/*Board.columns*/ {
             return true
         }
         
