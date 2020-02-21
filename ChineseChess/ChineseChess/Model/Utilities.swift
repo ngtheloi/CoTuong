@@ -45,6 +45,12 @@ class MyAppDelegate: NSObject {
 	static var alertView: AlertView!
 	
 	static var setting: GameSetting = {
+		if UserDefaults.standard.integer(forKey: "timeLeft") == 0 {
+			UserDefaults.standard.set("30", forKey: "timeLeft")
+			UserDefaults.standard.set("2", forKey: "pausesLeft")
+			UserDefaults.standard.set("30", forKey: "pauseTimeLeft")
+			UserDefaults.standard.synchronize()
+		}
 		let timeLeft: Int = UserDefaults.standard.integer(forKey: "timeLeft")
 		let pausesLeft: Int = UserDefaults.standard.integer(forKey: "pausesLeft")
 		let pauseTimeLeft: Int = UserDefaults.standard.integer(forKey: "pauseTimeLeft")

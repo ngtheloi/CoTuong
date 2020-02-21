@@ -74,6 +74,7 @@ class GameViewController: UIViewController {
 		MyAppDelegate.navigationView = nil
 		MyAppDelegate.playerInfoView = nil
 		MyAppDelegate.alertView = nil
+		MyAppDelegate.brain.replay()
 	}
 	
 	@objc func performOperation(_ sender: PieceView!) {

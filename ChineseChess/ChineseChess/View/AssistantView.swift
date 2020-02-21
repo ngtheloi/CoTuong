@@ -136,7 +136,10 @@ extension AssistantView: UITextFieldDelegate {
 	func textFieldDidChangeSelection(_ textField: UITextField) {
 		if timeLeftTextField.text != currentTimeLeft || pausesLeftTextField.text != currentPausesLeft || pauseTimeLeftTextField.text != currentPauseTimeLeft {
 			change = true
-			self.loadButtonsState()
 		}
+		if timeLeftTextField.text == "" || pausesLeftTextField.text == "" || pauseTimeLeftTextField.text == "" || timeLeftTextField.text == "0" || pausesLeftTextField.text == "0" || pauseTimeLeftTextField.text == "0" {
+			change = false
+		}
+		self.loadButtonsState()
 	}
 }
