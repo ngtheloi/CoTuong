@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NavigationViewDelegate {
-	func dismissViewController()
+	func backToMainMenu()
 	func timeOut()
 }
 
@@ -64,6 +64,6 @@ class NavigationView: UIView {
 	}
 	
 	@IBAction func userClickedBackBtn(_ sender: Any) {
-		self.delegate.dismissViewController()
+		self.delegate.backToMainMenu()
 	}
 }

@@ -159,8 +159,8 @@ class GameViewController: UIViewController {
 }
 
 extension GameViewController: NavigationViewDelegate {
-	func dismissViewController() {
-		self.dismiss(animated: true, completion: nil)
+	func backToMainMenu() {
+		self.showAlertView(.ExitGame)
 	}
 	
 	func timeOut() {
@@ -169,6 +169,10 @@ extension GameViewController: NavigationViewDelegate {
 }
 
 extension GameViewController: AlertViewDelegate {
+	func dismissViewController() {
+		self.dismiss(animated: true, completion: nil)
+	}
+	
 	func replayGame() {
 		MyAppDelegate.brain.replay()
 		self.clearPendingPieceView()
