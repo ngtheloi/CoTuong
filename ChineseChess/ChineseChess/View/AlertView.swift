@@ -128,8 +128,8 @@ class AlertView: UIView {
 				MyAppDelegate.playerInfoView.player2PausesLeft -= 1
 			}
 		}
-		MyAppDelegate.playerInfoView.player1PauseBtn.isUserInteractionEnabled = (MyAppDelegate.playerInfoView.player1PausesLeft != 0)
-		MyAppDelegate.playerInfoView.player2PauseBtn.isUserInteractionEnabled = (MyAppDelegate.playerInfoView.player2PausesLeft != 0)
+		MyAppDelegate.playerInfoView.player1PauseBtn.isUserInteractionEnabled = (MyAppDelegate.playerInfoView.player1PausesLeft != 0 && MyAppDelegate.brain.currentPlayer == .Red)
+        	MyAppDelegate.playerInfoView.player2PauseBtn.isUserInteractionEnabled = (MyAppDelegate.playerInfoView.player2PausesLeft != 0 && MyAppDelegate.brain.currentPlayer == .Black)
 		MyAppDelegate.playerInfoView.updatePlayerPausesLeft()
 		self.stopTimers()
 		self.removeFromSuperview()
